@@ -8,12 +8,21 @@ const App = () => {
     setCounter(counter + 1);
   };
 
+  const decrease = () => {
+    console.log("counter: " + counter);
+    setCounter(counter - 1);
+  };
+
   return (
     <>
       <h1>Counter</h1>
       <p>{counter}</p>
       <button onClick={increase}> + </button>
-      <button onClick={() => setCounter(counter + 1)}>+</button>
+      <button onClick={decrease}> - </button>
+      <button onClick={() => setCounter(0)}>reset</button>
+      <br />
+      <button onClick={() => setCounter(counter + 5)}>+ by 5</button>
+      <button onClick={() => setCounter(counter - 5)}>- by 5</button>
     </>
   );
 };
